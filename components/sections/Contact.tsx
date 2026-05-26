@@ -20,11 +20,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Let&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Connect</span>
+            Let{"'"}s <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Connect</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-md leading-relaxed">
-            I&apos;m always open to discussing new projects, creative ideas, or
-            opportunities to be part of your visions. Let&apos;s build something amazing together.
+            I{"'"}m always open to discussing new projects, creative ideas, or
+            opportunities to be part of your visions. Let{"'"}s build something amazing together.
           </p>
           <div className="flex gap-4 mb-10">
             <Button variant="outline" size="icon" asChild className="rounded-full w-12 h-12 border-white/10 hover:border-primary/50 hover:bg-primary/10 transition-colors">

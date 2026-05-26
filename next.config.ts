@@ -1,14 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
-  images: { 
+  images: {
     unoptimized: true,
-    domains: [
-      'images.unsplash.com',
-      'cdn.jsdelivr.net',
-      'raw.githubusercontent.com'
-    ]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.jsdelivr.net",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "avatar.iran.liara.run",
+      },
+    ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
