@@ -11,8 +11,65 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({subsets:["latin"]});
 
 export const metadata: Metadata = {
-  title: "Indransh Pratap | Software Engineer",
-  description: "Building scalable web products, solving problems with DSA and exploring security-focused solutions.",
+  metadataBase: new URL("https://indransh.vercel.app"),
+
+  title: {
+    default: "Indransh Pratap | Software Engineer",
+    template: "%s | Indransh Pratap",
+  },
+
+  description:
+    "Software Engineer, MERN Developer and DSA enthusiast building scalable products and security focused solutions.",
+
+  keywords: [
+    "Indransh Pratap",
+    "Software Engineer",
+    "MERN Developer",
+    "React Developer",
+    "Next.js",
+    "Node.js",
+    "Portfolio",
+    "DSA",
+    "Cyber Security"
+  ],
+
+  authors: [
+    {
+      name: "Indransh Pratap",
+    },
+  ],
+
+  creator: "Indransh Pratap",
+
+  openGraph: {
+    title: "Indransh Pratap | Software Engineer",
+
+    description:
+      "Portfolio of Indransh Pratap - MERN Developer and problem solver.",
+
+    url: "https://indransh.vercel.app",
+
+    siteName: "Indransh Portfolio",
+
+    type: "website",
+
+    locale: "en_US",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Indransh Pratap | Software Engineer",
+
+    description:
+      "Portfolio of Indransh Pratap",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
