@@ -71,7 +71,7 @@ const GithubStats = ({ username }: Props) => {
   if(!stats) return null;
 
   // // Calculate current streak
-  const currentStreak = stats.contributions.slice().reverse().reduce((streak , day , index , array)=>{
+  const currentStreak = stats.contributions.slice().reverse().reduce((streak , day , index)=>{
     if(index === 0 && day.count === 0) return 0;
     if(day.count > 0) return streak + 1;
 
@@ -157,12 +157,11 @@ const GithubStats = ({ username }: Props) => {
     <div className="grid grid-rows-1 grid-flow-col gap-1 min-w-[600px]">
     <TooltipProvider>
       {
-        stats.contributions.slice(-30).map((day , index)=>(
+        stats.contributions.slice(-30).map((day)=>(
           <motion.div
           key={day.date}
           initial={{scale:0}}
           animate={{scale:1}}
-          transition={{delay:index * 0.02}}
           > 
           <Tooltip>
             <TooltipTrigger>

@@ -43,14 +43,14 @@ export async function GET(request: NextRequest) {
       `;
 
     const response = await octokit.graphql(query, { username });
-    //   @ts-expect-error
+    // @ts-expect-error - response.user.contributionsCollection is not typed by octokit.graphql
     const calendar = response.user.contributionsCollection.contributionCalendar;
 
     //   Flatten the weeks array to get all contribution days
 
-    // @ts-expect-error
+    // @ts-expect-error - calendar.weeks is not typed
     const contributions = calendar.weeks.flatMap((week) =>
-      // @ts-expect-error
+      // @ts-expect-error - week.contributionDays is not typed
       week.contributionDays.map((day) => ({
         count: day.contributionCount,
         date: day.date,

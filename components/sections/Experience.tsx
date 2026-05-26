@@ -43,7 +43,7 @@ const Experience = () => {
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Experience</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            My professional journey and the impact I've made along the way.
+            My professional journey and the impact I&apos;ve made along the way.
           </p>
         </motion.div>
       </div>

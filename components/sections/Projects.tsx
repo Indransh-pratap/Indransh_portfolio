@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, CheckCircle2 } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const projectsData = [
@@ -107,7 +106,7 @@ const Projects = () => {
 
       <div className="flex flex-col gap-16 max-w-5xl mx-auto">
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <motion.div
               layout
               key={project.title}
