@@ -1,11 +1,17 @@
 import { Octokit } from "octokit";
 import { NextResponse, NextRequest } from "next/server";
 
-const octokit = new Octokit({
-  auth: process.env.GITHUB_TOKEN,
-});
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const octokit = GITHUB_TOKEN ? new Octokit({ auth: GITHUB_TOKEN }) : null;
 
 export async function GET(request: NextRequest) {
+  if (!octokit) {
+    console.error("GITHUB_TOKEN is missing");
+    return NextResponse.json(
+      { error: "GitHub service not configured" },
+      { status: 500 }
+    );
+  }
   const { searchParams } = new URL(request.url);
 
   const username = searchParams.get("username");
@@ -13,7 +19,7 @@ export async function GET(request: NextRequest) {
   if (!username) {
     return NextResponse.json(
       { error: "Username is Required" },
-      { status: 401 }
+      { status: 400 }
     );
   }
 
@@ -37,14 +43,14 @@ export async function GET(request: NextRequest) {
       `;
 
     const response = await octokit.graphql(query, { username });
-    //   @ts-ignore
+    //   @ts-expect-error
     const calendar = response.user.contributionsCollection.contributionCalendar;
 
     //   Flatten the weeks array to get all contribution days
 
-    // @ts-ignore
+    // @ts-expect-error
     const contributions = calendar.weeks.flatMap((week) =>
-      // @ts-ignore
+      // @ts-expect-error
       week.contributionDays.map((day) => ({
         count: day.contributionCount,
         date: day.date,

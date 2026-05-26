@@ -32,12 +32,25 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // backend logic here
-    console.log(values);
-    toast("Message sent sucessfully.")
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-    form.reset();
+      if (!res.ok) {
+        throw new Error();
+      }
+
+      toast.success("Message sent successfully");
+      form.reset();
+    } catch {
+      toast.error("Failed to send message");
+    }
   }
 
   return (
@@ -50,9 +63,8 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Suraj Jha" {...field} />
+                <Input placeholder="Indransh" {...field} />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -63,11 +75,10 @@ const ContactForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
                 <Input placeholder="jhon@example.com" {...field} />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}

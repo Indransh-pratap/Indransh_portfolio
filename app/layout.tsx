@@ -6,11 +6,13 @@ import { Toaster } from "@/components/ui/sonner";
 import { Footer } from "@/components/layout/footer";
 
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 const inter = Inter({subsets:["latin"]});
 
 export const metadata: Metadata = {
-  title: "Suraj Jha | Fullstack Developer.",
-  description: "Fullstack developer specializing in modern web technologies.",
+  title: "Indransh Pratap | Software Engineer",
+  description: "Building scalable web products, solving problems with DSA and exploring security-focused solutions.",
 };
 
 export default function RootLayout({
@@ -19,14 +21,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className}`}
+        className={`${inter.className} antialiased`}
       >
-        <Header/>
-        {children}
-        <Toaster/>
-        <Footer/>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header/>
+          {children}
+          <Toaster/>
+          <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   );
