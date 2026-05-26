@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Node.js",
     "Portfolio",
     "DSA",
-    "Cyber Security"
+    "Cyber Security",
   ],
 
   authors: [
@@ -59,11 +59,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "Indransh Pratap | Software Engineer",
+    title: "Indransh Pratap | Software Engineer",
 
-    description:
-      "Portfolio of Indransh Pratap",
+    description: "Portfolio of Indransh Pratap",
   },
 
   robots: {
@@ -77,21 +75,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Indransh Pratap",
+    url: "https://indransh.vercel.app",
+    jobTitle: "Software Engineer",
+    sameAs: [
+      "https://github.com/indransh-pratap",
+      "https://linkedin.com/in/indransh-pratap-947489375/",
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} antialiased`}
-      >
+      <body className={`${inter.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <Header/>
+          <Header />
           {children}
-          <Toaster/>
-          <Footer/>
+          <Toaster />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

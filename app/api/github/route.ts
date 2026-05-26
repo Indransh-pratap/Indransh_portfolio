@@ -4,6 +4,22 @@ import { NextResponse, NextRequest } from "next/server";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const octokit = GITHUB_TOKEN ? new Octokit({ auth: GITHUB_TOKEN }) : null;
 
+interface GitHubGraphQLResponse {
+  user: {
+    contributionsCollection: {
+      contributionCalendar: {
+        totalContributions: number;
+        weeks: {
+          contributionDays: {
+            contributionCount: number;
+            date: string;
+          }[];
+        }[];
+      };
+    };
+  };
+}
+
 export async function GET(request: NextRequest) {
   if (!octokit) {
     console.error("GITHUB_TOKEN is missing");
@@ -42,15 +58,15 @@ export async function GET(request: NextRequest) {
         }
       `;
 
-    const response = await octokit.graphql(query, { username });
-    // @ts-expect-error - response.user.contributionsCollection is not typed by octokit.graphql
+    const response = (await octokit.graphql(query, {
+      username,
+    })) as GitHubGraphQLResponse;
+
     const calendar = response.user.contributionsCollection.contributionCalendar;
 
     //   Flatten the weeks array to get all contribution days
 
-    // @ts-expect-error - calendar.weeks is not typed
     const contributions = calendar.weeks.flatMap((week) =>
-      // @ts-expect-error - week.contributionDays is not typed
       week.contributionDays.map((day) => ({
         count: day.contributionCount,
         date: day.date,

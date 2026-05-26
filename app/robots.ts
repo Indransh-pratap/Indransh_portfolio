@@ -1,11 +1,11 @@
-export default function robots() {
+import { MetadataRoute } from "next";
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-
-    sitemap:
-      "https://indransh.vercel.app/sitemap.xml",
+    sitemap: "https://indransh.vercel.app/sitemap.xml",
   };
 }
