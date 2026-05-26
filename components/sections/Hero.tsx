@@ -89,16 +89,18 @@ const Hero = () => {
                 GitHub
               </Button>
             </Link>
-            <Link href="https://linkedin.com" target="_blank">
+            <Link href="https://linkedin.com/in/indransh-pratap-947489375/" target="_blank">
               <Button variant="outline" size="lg" className="rounded-xl gap-2 border-border hover:border-foreground/20 hover:bg-black/5 dark:hover:bg-white/5 transition-all hover:-translate-y-1 active:scale-95">
                 <Linkedin className="w-4 h-4"/>
                 LinkedIn
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="rounded-xl gap-2 border-border hover:border-foreground/20 hover:bg-black/5 dark:hover:bg-white/5 transition-all hover:-translate-y-1 active:scale-95">
-              <Mail className="w-4 h-4"/>
-              Contact
-            </Button>
+            <Link href="#contact">
+              <Button variant="outline" size="lg" className="rounded-xl gap-2 border-border hover:border-foreground/20 hover:bg-black/5 dark:hover:bg-white/5 transition-all hover:-translate-y-1 active:scale-95">
+                <Mail className="w-4 h-4"/>
+                Contact
+              </Button>
+            </Link>
           </div>
         </motion.div>
 

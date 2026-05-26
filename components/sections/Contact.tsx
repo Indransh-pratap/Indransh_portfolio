@@ -33,12 +33,12 @@ const Contact = () => {
               </a>
             </Button>
             <Button variant="outline" size="icon" asChild className="rounded-full w-12 h-12 border-white/10 hover:border-secondary/50 hover:bg-secondary/10 transition-colors">
-              <a href="https://linkedin.com" target="_blank">
+              <a href="https://linkedin.com/in/indransh-pratap-947489375/" target="_blank">
                 <Linkedin className="w-5 h-5" />
               </a>
             </Button>
             <Button variant="outline" size="icon" asChild className="rounded-full w-12 h-12 border-white/10 hover:border-accent/50 hover:bg-accent/10 transition-colors">
-              <a href="mailto:indransh@example.com" target="_blank">
+              <a href="mailto:indranshpratap@gmail.com" target="_blank">
                 <Mail className="w-5 h-5" />
               </a>
             </Button>

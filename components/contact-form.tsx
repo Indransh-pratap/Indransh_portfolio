@@ -77,7 +77,7 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="jhon@example.com" {...field} />
+                <Input placeholder="indranshpratap@gmail.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

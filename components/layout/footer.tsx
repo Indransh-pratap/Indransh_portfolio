@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold text-primary mb-4">Indransh Pratp</h3>
+            <h3 className="text-xl font-bold text-primary mb-4">Indransh Pratap</h3>
             <p className="text-muted-foreground mb-4">
               Full Stack Developer crafting modern web experiences with a focus on user
               experience and performance.
@@ -27,7 +27,7 @@ export function Footer() {
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <a href="indranshpratap.com">
+                <a href="mailto:indranshpratap@gmail.com">
                   <Mail className="w-4 h-4" />
                 </a>
               </Button>
@@ -67,7 +67,7 @@ export function Footer() {
                 Greater Noida 
               </li>
               <li>
-                <a href="mailto:john@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:indranshpratap@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   indranshpratap@gmail.com
                 </a>
               </li>
