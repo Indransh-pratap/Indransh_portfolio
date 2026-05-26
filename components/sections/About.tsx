@@ -72,15 +72,15 @@ export default function About() {
             <div className="relative pl-6 border-l-2 border-primary/20 space-y-6">
               <div className="relative">
                 <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-background border-2 border-primary" />
-                <h4 className="text-lg font-bold text-foreground">B.Tech in Computer Science</h4>
-                <p className="text-primary font-medium text-sm mb-2">2021 - 2025</p>
-                <p className="text-muted-foreground text-sm">Focusing on algorithms, full-stack development, and cybersecurity principles.</p>
+                <h4 className="text-lg font-bold text-foreground">B.Tech in Computer Science, GL Bajaj institute of technology</h4>
+                <p className="text-primary font-medium text-sm mb-2">2024 - 2028</p>
+                <p className="text-muted-foreground text-sm">Focusing on algorithms, full-stack development, SDE</p>
               </div>
               <div className="relative">
                 <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-background border-2 border-muted-foreground" />
-                <h4 className="text-lg font-bold text-foreground">Higher Secondary</h4>
-                <p className="text-muted-foreground font-medium text-sm mb-2">2019 - 2021</p>
-                <p className="text-muted-foreground text-sm">Science stream with Computer Science.</p>
+                <h4 className="text-lg font-bold text-foreground">Senior Secondary</h4>
+                <p className="text-muted-foreground font-medium text-sm mb-2">2024</p>
+           
               </div>
             </div>
           </div>

@@ -6,23 +6,23 @@ import { Award, Trophy, Star } from "lucide-react";
 
 const achievements = [
   {
-    title: "Solved 300+ DSA Problems",
-    platform: "LeetCode & GeeksForGeeks",
+    title: "Solved 200+ DSA Problems",
+    platform: "LeetCode & codechef",
     icon: <Trophy className="w-6 h-6 text-yellow-500" />,
     description: "Consistent problem solver focusing on algorithms, data structures, and optimization techniques."
   },
-  {
-    title: "1st Runner Up - Hackathon 2024",
-    platform: "TechFest Hackathon",
-    icon: <Award className="w-6 h-6 text-primary" />,
-    description: "Built an AI-powered educational tool within 48 hours, selected among 50+ participating teams."
-  },
-  {
-    title: "Cybersecurity Certification",
-    platform: "Coursera",
-    icon: <Star className="w-6 h-6 text-secondary" />,
-    description: "Completed comprehensive coursework covering network security, ethical hacking, and secure coding."
-  }
+  // {
+  //   title: "1st Runner Up - Hackathon 2024",
+  //   platform: "TechFest Hackathon",
+  //   icon: <Award className="w-6 h-6 text-primary" />,
+  //   description: "Built an AI-powered educational tool within 48 hours, selected among 50+ participating teams."
+  // },
+  // {
+  //   title: "Cybersecurity Certification",
+  //   platform: "Coursera",
+  //   icon: <Star className="w-6 h-6 text-secondary" />,
+  //   description: "Completed comprehensive coursework covering network security, ethical hacking, and secure coding."
+  // }
 ];
 
 const Achievements = () => {

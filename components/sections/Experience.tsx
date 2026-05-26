@@ -6,9 +6,9 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    role: "Full Stack Developer Intern",
-    company: "Tech Solutions Inc.",
-    duration: "Jun 2025 - Present",
+    role: "Backend Engineer intern",
+    company: "Ekikai",
+    duration: "May 2026- Present",
     description: [
       "Developing and maintaining scalable MERN stack web applications.",
       "Optimized database queries resulting in a 30% reduction in load times.",
@@ -16,13 +16,15 @@ const experiences = [
     ]
   },
   {
-    role: "Freelance Web Developer",
-    company: "Self-Employed",
-    duration: "Jan 2024 - May 2025",
+    role: "Cyber Security Intern",
+    Organization: "Amroha Police (UPP)",
+    duration: "june 2025 - july 2025",
     description: [
-      "Built modern, responsive websites for small businesses using React and Tailwind CSS.",
-      "Integrated third-party APIs for payment processing and analytics.",
-      "Ensured all applications followed best practices for accessibility and SEO."
+       "Worked on cybersecurity-focused initiatives under Amroha Police (UPP), contributing to security awareness and technical support tasks.",
+  
+  "Assisted in research, analysis, and monitoring activities related to cyber threats, digital investigations, and OSINT practices.",
+
+  "Collaborated on technology-driven solutions and explored the use of security tools for improving public safety operations."
     ]
   }
 ];
